@@ -22,12 +22,19 @@ async def main(args):
 
     print("\nInput:", text)
 
-    async with Translator() as translator:
-        result = await translator.translate(
-            text,
-            src=args.src,
-            dest=args.dest,
-        )
+    async with Translator(raise_exception=True) as translator:
+        try:
+            result = await translator.translate(
+                text,
+                src=args.src,
+                dest=args.dest,
+            )
+        except Exception as error:
+            raise RuntimeError(
+                "Translation request to Google Translate failed "
+                "(the server's network/IP may be rate-limited or blocked "
+                "by Google's unofficial translate endpoint)."
+            ) from error
 
     print("Output:", result.text)
 
