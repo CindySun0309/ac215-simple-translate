@@ -4,11 +4,11 @@
 set -e
 
 # Define some environment variables
-export IMAGE_NAME="simple-translate"
+export IMAGE_NAME="simple-translate-ac215"
 export BASE_DIR=$(pwd)
 
 # Default values
-DOCKER_USERNAME="dlops"
+DOCKER_USERNAME="cindysun23333"
 
 echo "Building production image..."
 

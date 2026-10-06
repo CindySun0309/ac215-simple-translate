@@ -151,6 +151,12 @@ To exit the Bash shell, use the 'exit' command:
 exit
 ```
 
+To pull a docker image use:
+```
+user_name/simple-translate-ac215
+```
+
+
 **Step 1:**
 We want to base our docker image from `python:3.12-slim-bookworm` the official Debian-hosted Python 3.12 image
 ```
