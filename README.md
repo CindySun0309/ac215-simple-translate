@@ -129,7 +129,8 @@ _**Step 3 of 4** — package the venv into a portable image. Build a Docker imag
 
 * Follow these steps to create a  `Dockerfile` step by step (Do a Build + Run after each step):
 
-**Cindy's note**
+**Cindy's note:**
+
 Use this command to build the dockerfile:
 ```
 docker build -t simple-translate -f Dockerfile .
@@ -140,6 +141,15 @@ And use this command to run the image:
 docker run --rm -ti simple-translate
 ```
 
+And we are now inside the container’s Python interpreter. Use this commad to exit the container’s Python interpreter:
+```
+exit()
+```
+
+To exit the Bash shell, use the 'exit' command:
+```
+exit
+```
 
 **Step 1:**
 We want to base our docker image from `python:3.12-slim-bookworm` the official Debian-hosted Python 3.12 image
